@@ -20,7 +20,7 @@ function connect() {
         setConnected(true);
         console.log('Connected: ' + frame);
             stompClient.subscribe('/topic/public', function (message) {
-            showMessage("받은 메시지: " + message[0].body); //서버에 메시지 전달 후 리턴받는 메시지
+            showMessage("받은 메시지: " + message.body); //서버에 메시지 전달 후 리턴받는 메시지
 
         });
     });
